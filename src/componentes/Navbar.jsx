@@ -2,8 +2,7 @@ import Button from "@/componentes/Button";
 export default function Navbar(){
 
     return(
-        <div>
-            <nav className="flex flex-row gap-2 itens-center justify-center p-2 border-b-2 mb-4 shadow-xl ">
+            <nav className="flex flex-row gap-2 itens-center justify-center p-2 border-b-2 mb-4 shadow-xl color-[#000000]">
                 <div className="container mx-auto flex justify-between items-center ml-2 mr-0">
                     <div>
                         {/*<img src={logo} width={"150px"} alt={"Logo"}/>*/}
@@ -13,7 +12,6 @@ export default function Navbar(){
                             <a href="/">
                                 <Button> <i className={"pi pi-home"}></i> Home</Button>
                             </a>
-
                         </li>
 
                         <li className="text-white">
@@ -39,6 +37,5 @@ export default function Navbar(){
                     </ul>
                 </div>
             </nav>
-        </div>
     )
 }
