@@ -4,7 +4,7 @@ import "@/app/globals.css";
 
 export default function Formacao(){
     return(
-        <MainCard>
+        <MainCard destaque={"formacao"}>
 
             <div className="flex flex-col justify-start items-center gap-5 h-screen mx-24">
                 <div className="flex md:flex-row flex-col justify-start items-center gap-5">

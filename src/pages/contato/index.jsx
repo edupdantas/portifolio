@@ -4,7 +4,7 @@ import "@/app/globals.css";
 
 export default function Contato(){
     return(
-        <MainCard>
+        <MainCard destaque={"contato"}>
             <div className="flex flex-row justify-start items-center md:items-start md:h-screen gap-10 mb-5 mx-24">
                 <div className="flex flex-row justify-start items-center gap-5">
                     <a href="https://www.instagram.com/edu._.dantas/" target="_blank"

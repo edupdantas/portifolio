@@ -5,7 +5,7 @@ import Footer from "@/componentes/Footer";
 
 export default function Home() {
     return (
-        <MainCard>
+        <MainCard destaque={"home"}>
             <div className="flex justify-center items-start h-screen">
                 <img src="profile.png" className="mx-24 w-full min-w-[360px] h-[70%] object-cover rounded-lg"/>
             </div>
