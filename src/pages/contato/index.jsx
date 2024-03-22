@@ -6,7 +6,7 @@ export default function Contato(){
     return(
         <MainCard destaque={"contato"}>
             <div className="flex flex-row justify-start items-center md:items-start md:h-screen gap-10 mb-5 mx-24">
-                <div className="flex flex-row justify-start items-center gap-5">
+                <div className="flex flex-row justify-start items-center gap-5 border-2 border-gray-900 rounded-xl p-2">
                     <a href="https://www.instagram.com/edu._.dantas/" target="_blank"
                        className="hover:text-gray-900 dark:hover:text-white flex flex-col justify-start items-center gap-5">
                         <svg
@@ -19,7 +19,7 @@ export default function Contato(){
                         <p>Instagram</p>
                     </a>
                 </div>
-                <div className="flex flex-row justify-start items-center gap-5">
+                <div className="flex flex-row justify-start items-center gap-5 border-2 border-gray-900 rounded-xl p-2">
                     <a href="https://www.linkedin.com/in/eduardo-paulino-a78584239/"
                        className="hover:text-gray-900 dark:hover:text-white flex flex-col justify-start items-center gap-5"
                        target="_blank">
@@ -33,7 +33,7 @@ export default function Contato(){
                         <p>LinkedIn</p>
                     </a>
                 </div>
-                <div className="flex flex-row justify-start items-center gap-5">
+                <div className="flex flex-row justify-start items-center gap-5 border-2 border-gray-900 rounded-xl p-2">
                     <a href="https://github.com/edupdantas"
                        className="hover:text-gray-900 dark:hover:text-white flex flex-col justify-start items-center gap-5" target="_blank">
                         <svg
