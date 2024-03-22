@@ -22,7 +22,7 @@ export default function Navbar(){
                     </div>
                     <div className="flex flex-row space-x-1">
                         <li className="text-white">
-                            <a href="/habilidades" className="w-1/2 sm:w-auto">
+                            <a href="/formacao" className="w-1/2 sm:w-auto">
                                 <Button>Formação</Button>
                             </a>
                         </li>

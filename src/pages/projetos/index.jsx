@@ -5,8 +5,16 @@ import Footer from "@/componentes/Footer";
 
 export default function Projetos(){
     return(
-            <MainCard>
-                <p>teste bacanudo</p>
-            </MainCard>
+        <MainCard>
+            <div className="flex flex-col justify-center items-start p-5">
+                
+            </div>
+            <div className="flex flex-col justify-center items-start p-5">
+
+            </div>
+            <div className="flex flex-col justify-center items-start p-5">
+
+            </div>
+        </MainCard>
     )
 }
