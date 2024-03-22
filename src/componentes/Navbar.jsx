@@ -3,8 +3,8 @@ import Button from "@/componentes/Button";
 export default function Navbar({destaque}){
     return(
         <nav className="flex md:flex-row flex-col gap-2 items-between justify-between p-2 py-4 border-b-2 mb-4 shadow-xl bg-gray-900 sm:w-full sm:flex sm:justify-center">
-            <div className="container md:flex-row flex-col flex justify-between items-between ml-2 mr-0 w-full">
-                <h1 className="text-xl ">PORTIFÓLIO</h1>
+            <div className="container md:flex-row flex-col flex justify-between items-between ml-2 mr-0 w-full gap-5">
+                <img src="logo.png" className="object-cover h-[50px] w-96"/>
                 <ul className="flex md:flex-row flex-col gap-1">
                     <div className="flex flex-row space-x-1 pb-1">
                         <li className="text-white">

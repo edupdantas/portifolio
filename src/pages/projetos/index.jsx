@@ -1,10 +1,30 @@
 import MainCard from "@/componentes/MainCard";
 import "@/app/globals.css";
-
+import {useState} from "react";
+import DialogCss from "@/Dialogs/DialogCss";
+import DialogBootstrap from "@/Dialogs/DialogBootstrap";
+import DialogHtml from "@/Dialogs/DialogHtml";
+import DialogJs from "@/Dialogs/DialogJs";
+import DialogReact from "@/Dialogs/DialogReact";
 
 export default function Formacao(){
+    const[openCss,setOpenCss] = useState(false)
+    const[openHtml,setOpenHtml] = useState(false)
+    const[openBootstrap,setOpenBootstrap] = useState(false)
+    const[openReact,setOpenReact] = useState(false)
+    const[openJs,setOpenJs] = useState(false)
+
+
     return(
         <MainCard destaque={"projetos"}>
+            <DialogCss open={openCss} close={() => setOpenCss(false)}/>
+            <DialogHtml open={openHtml} close={() => setOpenHtml(false)}/>
+            <DialogJs open={openJs} close={() => setOpenJs(false)} title={"JavaScript"}/>
+            <DialogBootstrap open={openBootstrap} close={() => setOpenBootstrap(false)} />
+            <DialogReact open={openReact} close={() => setOpenReact(false)} title={"ReactJS"}>
+
+            </DialogReact>
+
 
             <div className="flex flex-col justify-start items-center gap-5 h-screen mx-24">
                 <div
@@ -45,20 +65,74 @@ export default function Formacao(){
 
                         </p>
                     </div>
-                    <div className="flex flex-col gap-1">
-                        <a>
+                    <div className="flex flex-col gap-2">
+                        <a onClick={()=> setOpenJs(true)}>
                             <img src="js.png" className="max-w-[25px] min-w-[25px] rounded-lg"/>
                         </a>
-                        <a>
+                        <a onClick={()=> setOpenHtml(true)}>
                             <img src="html.webp" className="max-w-[25px] min-w-[25px]"/>
                         </a>
-                        <a>
+                        <a onClick={()=> setOpenReact(true)}>
                             <img src="react.png" className="max-w-[25px] min-w-[25px]"/>
+                        </a>
+                        <a onClick={()=> setOpenBootstrap(true)}>
+                            <img src="bootstrap.png" className="max-w-[25px] min-w-[25px]"/>
                         </a>
                     </div>
 
                 </div>
-                <div className="flex md:flex-row flex-col justify-start items-center gap-5">
+                <div
+                    className="flex flex-row justify-start items-center gap-5 border-2 border-gray-900 rounded-xl p-2">
+                    <div className="flex md:flex-row flex-col gap-5">
+                        <img src="prime.png" className="max-w-[400px] min-w-[320px] object-contain"/>
+                        <p
+                            className="text-base md:text-xl md:text-start text-center mb-2 max-w-[400px] min-w-[320px]">
+                            O desenvolvimento da PrimeFlix utiliza uma api para captar filmes e exibir algumas
+                            informações sobre eles, além de possibilitar que o usuário salve filmes em sua conta.
+                        </p>
+                        <p className="text-base md:text-xl md:text-start text-center mb-2 max-w-[400px] min-w-[320px]">
+
+                        </p>
+                    </div>
+                    <div className="flex flex-col gap-2">
+                        <a onClick={() => setOpenHtml(true)}>
+                            <img src="html.webp" className="max-w-[25px] min-w-[25px]"/>
+                        </a>
+                        <a onClick={() => setOpenReact(true)}>
+                            <img src="react.png" className="max-w-[25px] min-w-[25px]"/>
+                        </a>
+                        <a onClick={() => setOpenCss(true)}>
+                            <img src="css.png" className="max-w-[25px] min-w-[25px]"/>
+                        </a>
+                    </div>
+
+                </div>
+                <div
+                    className="flex flex-row justify-start items-center gap-5 border-2 border-gray-900 rounded-xl p-2">
+                    <div className="flex md:flex-row flex-col gap-5">
+                        <img src="tasklist.png" className="max-w-[400px] min-w-[400px] object-fill"/>
+                        <p
+                            className="text-base md:text-xl md:text-start text-center mb-2 max-w-[320px] min-w-[320px]">
+                            O desenvolvimento de uma lista de tarefas que utiliza o serviço de banco de dados da Firebase para integrar uma lista de Tarefas guardando o login e a senha do usuário.
+                        </p>
+                        <p className="text-base md:text-xl md:text-start text-center mb-2 max-w-[400px] min-w-[320px]">
+
+                        </p>
+                    </div>
+                    <div className="flex flex-col gap-2">
+                        <a onClick={() => setOpenJs(true)}>
+                            <img src="js.png" className="max-w-[25px] min-w-[25px] rounded-lg"/>
+                        </a>
+                        <a onClick={() => setOpenHtml(true)}>
+                            <img src="html.webp" className="max-w-[25px] min-w-[25px]"/>
+                        </a>
+                        <a onClick={() => setOpenReact(true)}>
+                            <img src="react.png" className="max-w-[25px] min-w-[25px]"/>
+                        </a>
+                        <a onClick={() => setOpenCss(true)}>
+                            <img src="css.png" className="max-w-[25px] min-w-[25px]"/>
+                        </a>
+                    </div>
 
                 </div>
             </div>
