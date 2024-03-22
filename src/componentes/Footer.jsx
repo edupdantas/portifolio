@@ -6,10 +6,7 @@ export default function Footer(){
 
       <footer className="bg-white dark:bg-gray-900">
         <div className="mx-auto w-full max-w-screen-xl">
-          <div className="px-4 py-6 bg-gray-900 dark:bg-gray-900 md:flex md:items-center md:justify-between">
-        <span className="text-sm text-gray-500 dark:text-gray-300 sm:text-center">
-          Redes Sociais
-        </span>
+          <div className="px-4 py-6 bg-gray-900 dark:bg-gray-900 md:flex md:items-center md:justify-center">
             <div className="flex mt-4 items-center sm:justify-center md:mt-0 space-x-5 rtl:space-x-reverse">
               <a href="https://www.instagram.com/edu._.dantas/" target="_blank" className="text-gray-400 hover:text-gray-900 dark:hover:text-white">
                 <svg className="w-4 h-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor"
