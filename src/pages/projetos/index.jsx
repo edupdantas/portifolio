@@ -1,11 +1,11 @@
 import MainCard from "@/componentes/MainCard";
 import "@/app/globals.css";
 import {useState} from "react";
-import DialogCss from "@/Dialogs/DialogCss";
-import DialogBootstrap from "@/Dialogs/DialogBootstrap";
-import DialogHtml from "@/Dialogs/DialogHtml";
-import DialogJs from "@/Dialogs/DialogJs";
-import DialogReact from "@/Dialogs/DialogReact";
+import DialogCss from "@/componentes/Dialogs/DialogCss";
+import DialogBootstrap from "@/componentes/Dialogs/DialogBootstrap";
+import DialogHtml from "@/componentes/Dialogs/DialogHtml";
+import DialogJs from "@/componentes/Dialogs/DialogJs";
+import DialogReact from "@/componentes/Dialogs/DialogReact";
 
 export default function Formacao(){
     const[openCss,setOpenCss] = useState(false)
