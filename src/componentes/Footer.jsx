@@ -24,7 +24,7 @@ export default function Footer(){
                 </svg>
                 <span className="sr-only">LinkedIn page</span>
               </a>
-              <a href="#" className="text-gray-400 hover:text-gray-900 dark:hover:text-white">
+              <a href="https://github.com/edupdantas" className="text-gray-400 hover:text-gray-900 dark:hover:text-white">
                 <svg className="w-4 h-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor"
                      viewBox="0 0 20 20">
                   <path fill-rule="evenodd"
