@@ -1,8 +1,33 @@
+import React, {useState} from "react";
 import MainCard from "@/componentes/MainCard";
 import "@/app/globals.css";
 
 
 export default function Contato(){
+
+    const [nome, setNome] = useState("")
+    const [email, setEmail] = useState("")
+
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        if(!nome){
+            alert("Preencha o nome")
+            return
+        }
+        if(!email){
+            alert("Preencha o nome")
+            return
+        }
+        let arrJSON = localStorage.getItem("array");
+        let arrJS = JSON.parse(arrJSON)
+        const objeto = {
+            nome: nome,
+            email: email
+        }
+        arrJS.push(objeto)
+        localStorage.setItem("array",JSON.stringify(arrJS))
+    }
+
     return(
         <MainCard destaque={"contato"}>
             <div className="flex flex-row justify-start items-center md:items-start md:h-screen gap-10 mb-5 mx-24">
@@ -49,7 +74,7 @@ export default function Contato(){
                 </div>
             </div>
             <div className="flex flex-row justify-start items-start gap-5 h-screen mx-24">
-                <form className="w-full max-w-sm">
+                <form className="w-full max-w-sm" onSubmit={handleSubmit}>
                     <div className="md:flex md:items-center mb-6">
                         <div className="md:w-1/3">
                             <label className="block text-gray-500 font-bold md:text-right mb-1 md:mb-0 pr-4"
@@ -60,7 +85,7 @@ export default function Contato(){
                         <div className="md:w-2/3">
                             <input
                                 className="bg-gray-200 appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-purple-500"
-                                id="inline-full-name" type="text" placeholder="Seu nome"/>
+                                id="inline-full-name" type="text" placeholder="Seu nome" value={nome} onChange={e=> setNome(e.target.value)}/>
                         </div>
                     </div>
                     <div className="md:flex md:items-center mb-6">
@@ -72,7 +97,7 @@ export default function Contato(){
                         <div className="md:w-2/3">
                             <input
                                 className="bg-gray-200 appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-purple-500"
-                                id="inline-password" type="email" placeholder="seuemail@email.com"/>
+                                id="inline-password" type="email" placeholder="seuemail@email.com" value={email} onChange={e=> setEmail(e.target.value)}/>
                         </div>
                     </div>
                     <div className="md:flex md:items-center">
@@ -80,7 +105,7 @@ export default function Contato(){
                         <div className="flex md:w-2/3 items-center justify-center">
                             <button
                                 className="shadow bg-purple-500 hover:bg-purple-400 focus:shadow-outline focus:outline-none text-white font-bold py-2 px-4 rounded"
-                                type="button">
+                                type="submit">
                                 Entre em contato
                             </button>
                         </div>
