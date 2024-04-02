@@ -23,18 +23,22 @@ export default function Navbar({destaque}){
                     <div className="flex flex-row space-x-1">
                         <li className="text-white">
                             <a href="/formacao" className="w-1/2 sm:w-auto">
-                                <Button destaque={destaque==="formacao"}>Formação</Button>
+                                <Button destaque={destaque === "formacao"}>Formação</Button>
                             </a>
                         </li>
-
                         <li className="text-white">
                             <a href="/contato" className="w-1/2 sm:w-auto">
-                                <Button destaque={destaque==="contato"}>Contato</Button>
+                                <Button destaque={destaque === "contato"}>Contato</Button>
                             </a>
                         </li>
                         <li className="text-white">
                             <a href="/experiencias" className="w-1/2 sm:w-auto">
-                                <Button destaque={destaque==="experiencias"}>Experiências</Button>
+                                <Button destaque={destaque === "experiencias"}>Experiências</Button>
+                            </a>
+                        </li>
+                        <li className="text-white">
+                            <a href="/listarContatos">
+                                <Button destaque={destaque === "listarContatos"}>Listar Contatos</Button>
                             </a>
                         </li>
                     </div>
