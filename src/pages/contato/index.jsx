@@ -4,7 +4,6 @@ import "@/app/globals.css";
 
 
 export default function Contato(){
-
     const [nome, setNome] = useState("")
     const [email, setEmail] = useState("")
 
@@ -19,13 +18,25 @@ export default function Contato(){
             return
         }
         let arrJSON = localStorage.getItem("array");
-        let arrJS = JSON.parse(arrJSON)
+        let arrAUX = [];
+        let arrJS = [];
+
         const objeto = {
             nome: nome,
             email: email
         }
-        arrJS.push(objeto)
+        arrAUX.push(objeto)
+        console.log(arrJSON)
+        if (arrJSON){
+            arrJS = JSON.parse(arrJSON).concat(arrAUX)
+            console.log(arrJS)
+        }else{
+            arrJS = arrAUX
+        }
         localStorage.setItem("array",JSON.stringify(arrJS))
+        alert("Cadastro enviado")
+        setNome('')
+        setEmail('')
     }
 
     return(
